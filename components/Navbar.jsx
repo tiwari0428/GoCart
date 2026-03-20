@@ -84,7 +84,7 @@ const Navbar = () => {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        router.push(`/shop?search=${search}`);
+        router.push(`/frontend/shop?search=${search}`);
     };
 
     return (
@@ -102,9 +102,10 @@ const Navbar = () => {
                     {/* Desktop Menu */}
                     <div className="hidden sm:flex items-center gap-4 lg:gap-8 text-slate-600">
                         <Link href="/">Home</Link>
-                        <Link href="/shop">Shop</Link>
-                        <Link href="/">About</Link>
-                        <Link href="/">Contact</Link>
+                        <Link href="/frontend/shop">Shop</Link>
+                        <Link href="/frontend/About">About</Link>
+                        <Link href="/frontend/contact">Contact</Link>
+
 
                         <form onSubmit={handleSearch} className="hidden xl:flex items-center w-xs text-sm gap-2 bg-slate-100 px-4 py-3 rounded-full">
                             <Search size={18} className="text-slate-600" />
@@ -118,7 +119,7 @@ const Navbar = () => {
                             />
                         </form>
 
-                        <Link href="/cart" className="relative flex items-center gap-2 text-slate-600">
+                        <Link href="/frontend/cart" className="relative flex items-center gap-2 text-slate-600">
                             <ShoppingCart size={18} />
                             Cart
                             <button className="absolute -top-1 left-3 text-[8px] text-white bg-slate-600 size-3.5 rounded-full">{cartCount}</button>

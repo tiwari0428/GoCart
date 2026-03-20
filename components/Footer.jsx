@@ -24,9 +24,9 @@ const Footer = () => {
             title: "WEBSITE?",
             links: [
                 { text: "Home", path: '/', icon: null },
-                { text: "Privacy Policy", path: '/', icon: null },
-                { text: "Become Plus Member", path: '/pricing', icon: null },
-                { text: "Create Your Store", path: '/create-store', icon: null },
+                { text: "Privacy Policy", path: 'frontend/privacy', icon: null },
+                { text: "Become Plus Member", path: '/frontend/pricing', icon: null },
+                { text: "Create Your Store", path: '/frontend/create-store', icon: null },
             ]
         },
         {
@@ -54,10 +54,12 @@ const Footer = () => {
                         <Link href="/" className="text-4xl font-semibold text-slate-700">
                             <span className="text-green-600">go</span>cart<span className="text-green-600 text-5xl leading-0">.</span>
                         </Link>
-                        <p className="max-w-[410px] mt-6 text-sm">Welcome to gocart, your ultimate destination for the latest and smartest gadgets. From smartphones and smartwatches to essential accessories, we bring you the best in innovation — all in one place.</p>
+                        <p className="max-w-[410px] mt-6 text-sm">Welcome to gocart, your ultimate destination for the latest and smartest gadgets. 
+                            From smartphones and smartwatches to essential accessories, we bring you the best in innovation — all in one place.</p>
                         <div className="flex items-center gap-3 mt-5">
                             {socialIcons.map((item, i) => (
-                                <Link href={item.link} key={i} className="flex items-center justify-center w-10 h-10 bg-slate-100 hover:scale-105 hover:border border-slate-300 transition rounded-full">
+                                <Link href={item.link} key={i} className="flex items-center justify-center w-10 h-10 bg-slate-100 hover:scale-105 hover:border
+                                 border-slate-300 transition rounded-full">
                                     <item.icon />
                                 </Link>
                             ))}

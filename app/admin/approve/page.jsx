@@ -1,7 +1,8 @@
 'use client'
-import { storesDummyData } from "@/assets/assets"
-import StoreInfo from "@/components/admin/StoreInfo"
-import Loading from "@/components/Loading"
+
+import { storesDummyData } from "../../../assets/assets";
+import StoreInfo from "../../../components/admin/StoreInfo";
+import Loading from "../../../components/Loading";
 import { useEffect, useState } from "react"
 import toast from "react-hot-toast"
 
@@ -17,10 +18,13 @@ export default function AdminApprove() {
     }
 
     const handleApprove = async ({ storeId, status }) => {
-        // Logic to approve a store
-
-
-    }
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(`Store ${storeId} is ${status}`);
+            resolve("Done");
+        }, 1000);
+    });
+};
 
     useEffect(() => {
             fetchStores()
